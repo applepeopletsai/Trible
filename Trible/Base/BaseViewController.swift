@@ -13,11 +13,11 @@ class BaseViewController: UIViewController {
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
     
-    let sharer = "Sharer"
-    let experience = "ExperienceViewCOntroller"
-    let message = "MessageViewController"
-    let reservation = "ReservationViewController"
-    let personal = "PersonalViewController"
+    let explore = "Explore"
+    let message = "Message"
+    let booking = "Booking"
+    let experience = "Experiencer"
+    let mine = "Mine"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,44 +40,51 @@ class BaseViewController: UIViewController {
         self.navigationController?.view.backgroundColor = color
     }
     
-    func setupNavigationBackButton(image:UIImage) {
-        let backButton = UIButton(type: UIButtonType.custom) as UIButton
-        backButton.frame = CGRect(x: 0, y: 0, width: 12, height: 20)
-        backButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        backButton.setBackgroundImage(image, for: UIControlState.normal)
-        backButton.addTarget(self, action: #selector(navigationBackButton), for: UIControlEvents.touchUpInside)
-//        self.navigationItem.hidesBackButton = true // 關閉navigation向右滑動回到上一頁功能
+    func setupNavigationBackButton(image:UIImage?) {
+//        self.navigationItem.hidesBackButton = true
+        
+        let backButton = UIButton(type: .custom)
+        backButton.frame = CGRect(x: 0, y: 0, width: 40, height: 20)
+        backButton.imageView?.contentMode = .scaleAspectFit
+        backButton.setTitle("返回", for: .normal)
+        backButton.setTitleColor(UIColor.black, for: .normal)
+        backButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        backButton.setBackgroundImage(image, for: .normal)
+        backButton.addTarget(self, action: #selector(navigationBackButtonPress), for: .touchUpInside)
+        
         let barButtonItem = UIBarButtonItem(customView: backButton)
         self.navigationItem.leftBarButtonItem = barButtonItem
     }
     
-    func setupNavigationLeftButton(image:UIImage, title:String, type:UIButtonType, target:Any, action:Selector) {
-        let button = UIButton(type: UIButtonType.custom) as UIButton
-        let image = UIImage()
-        button.frame = CGRect(x: 0, y: 0, width: 12, height: 20)
-        button.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        button.setTitle(title, for: UIControlState.normal)
-        button.setBackgroundImage(image, for: UIControlState.normal)
-        button.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
+    func setupNavigationLeftButton(image:UIImage?, title:String, target:Any, action:Selector) {
+        let button = UIButton(type:.custom)
+        button.frame = CGRect(x: 0, y: 0, width: 40, height: 20)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        button.setBackgroundImage(image, for: .normal)
+        button.addTarget(target, action: action, for: .touchUpInside)
         
         let barButtonItem = UIBarButtonItem(customView: button)
         self.navigationItem.leftBarButtonItem = barButtonItem
     }
     
-    func setupNavigationRightButton(image:UIImage, title:String, type:UIButtonType, target:Any, action:Selector) {
-        let button = UIButton(type: UIButtonType.custom) as UIButton
-        let image = UIImage()
-        button.frame = CGRect(x: 0, y: 0, width: 12, height: 20)
-        button.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        button.setTitle(title, for: UIControlState.normal)
-        button.setBackgroundImage(image, for: UIControlState.normal)
-        button.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
+    func setupNavigationRightButton(image:UIImage?, title:String, target:Any, action:Selector) {
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 40, height: 20)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        button.setBackgroundImage(image, for: .normal)
+        button.addTarget(target, action: action, for: .touchUpInside)
         
         let barButtonItem = UIBarButtonItem(customView: button)
-        self.navigationItem.leftBarButtonItem = barButtonItem
+        self.navigationItem.rightBarButtonItem = barButtonItem
     }
     
-    func navigationBackButton() {
+    func navigationBackButtonPress() {
         self.view.endEditing(true)
         _ = self.navigationController?.popViewController(animated: true)
     }

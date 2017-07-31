@@ -44,7 +44,7 @@ class HotExperienceCell: UITableViewCell, UICollectionViewDataSource, UICollecti
     
     // MARK: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (screenWidth - 10 * 2) / 3, height: (screenWidth - 10 * 2) / 3)
+        return CGSize(width: (screenWidth - 10 * 2) / 3, height: itemHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

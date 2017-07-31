@@ -13,8 +13,6 @@
 		6519E0741F2C96C6007D6DBE /* HotExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519E0731F2C96C6007D6DBE /* HotExperienceCell.swift */; };
 		6519E0791F2C98C9007D6DBE /* HotExperienceCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519E0781F2C98C9007D6DBE /* HotExperienceCollectionCell.swift */; };
 		6532C3A11F12347100AC5227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532C3A01F12347100AC5227 /* AppDelegate.swift */; };
-		6532C3A31F12347100AC5227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532C3A21F12347100AC5227 /* ViewController.swift */; };
-		6532C3A61F12347100AC5227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6532C3A41F12347100AC5227 /* Main.storyboard */; };
 		6532C3A81F12347100AC5227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6532C3A71F12347100AC5227 /* Assets.xcassets */; };
 		6532C3AB1F12347100AC5227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6532C3A91F12347100AC5227 /* LaunchScreen.storyboard */; };
 		6532C3B51F12367A00AC5227 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532C3B41F12367A00AC5227 /* BaseViewController.swift */; };
@@ -31,6 +29,8 @@
 		65A7D7EA1F1248A0002E5DB8 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A7D7E91F1248A0002E5DB8 /* Booking.storyboard */; };
 		65A7D7EC1F124915002E5DB8 /* Experience.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A7D7EB1F124915002E5DB8 /* Experience.storyboard */; };
 		65A7D7EE1F124947002E5DB8 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A7D7ED1F124947002E5DB8 /* Mine.storyboard */; };
+		65ED1D551F2F608B00427A10 /* ExploreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED1D541F2F608B00427A10 /* ExploreListViewController.swift */; };
+		65ED1D5B1F2F6DB500427A10 /* ExploreListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED1D5A1F2F6DB500427A10 /* ExploreListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,6 @@
 		6519E0781F2C98C9007D6DBE /* HotExperienceCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotExperienceCollectionCell.swift; path = Classes/Explore/View/HotExperienceCollectionCell.swift; sourceTree = "<group>"; };
 		6532C39D1F12347100AC5227 /* Trible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6532C3A01F12347100AC5227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6532C3A21F12347100AC5227 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6532C3A51F12347100AC5227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6532C3A71F12347100AC5227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6532C3AA1F12347100AC5227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6532C3AC1F12347100AC5227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +58,8 @@
 		65A7D7E91F1248A0002E5DB8 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Booking.storyboard; path = Classes/Booking/View/Booking.storyboard; sourceTree = "<group>"; };
 		65A7D7EB1F124915002E5DB8 /* Experience.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Experience.storyboard; path = Classes/Experience/View/Experience.storyboard; sourceTree = "<group>"; };
 		65A7D7ED1F124947002E5DB8 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Mine.storyboard; path = Classes/Mine/View/Mine.storyboard; sourceTree = "<group>"; };
+		65ED1D541F2F608B00427A10 /* ExploreListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExploreListViewController.swift; path = Classes/Explore/Controller/ExploreListViewController.swift; sourceTree = "<group>"; };
+		65ED1D5A1F2F6DB500427A10 /* ExploreListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExploreListCell.swift; path = Classes/Explore/View/ExploreListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +121,8 @@
 				65A7D7BD1F123DC2002E5DB8 /* Main */,
 				65A7D7D01F124677002E5DB8 /* Classes */,
 				65A7D7CD1F124601002E5DB8 /* Tool */,
+				65ED1D5C1F2F701A00427A10 /* ShareClasses */,
 				6532C3A01F12347100AC5227 /* AppDelegate.swift */,
-				6532C3A21F12347100AC5227 /* ViewController.swift */,
-				6532C3A41F12347100AC5227 /* Main.storyboard */,
 				6532C3A71F12347100AC5227 /* Assets.xcassets */,
 				6532C3A91F12347100AC5227 /* LaunchScreen.storyboard */,
 				6532C3AC1F12347100AC5227 /* Info.plist */,
@@ -272,10 +271,8 @@
 		65A7D7D71F1246D5002E5DB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6519E0751F2C9863007D6DBE /* 歡迎語/進入探險 */,
-				6519E0761F2C987E007D6DBE /* 最近瀏覽 */,
-				6519E0771F2C988C007D6DBE /* 熱門體驗 */,
-				655B4CC41F2DDB9100555C96 /* 城市分類 */,
+				65ED1D581F2F6D7600427A10 /* 首頁 */,
+				65ED1D591F2F6D8100427A10 /* 體驗列表 */,
 				65A7D7E51F1247B2002E5DB8 /* Explore.storyboard */,
 			);
 			name = View;
@@ -284,7 +281,8 @@
 		65A7D7D81F1246D9002E5DB8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6519E06F1F2C91F6007D6DBE /* ExploreViewController.swift */,
+				65ED1D561F2F609100427A10 /* 首頁 */,
+				65ED1D571F2F60AA00427A10 /* 體驗列表 */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -377,6 +375,72 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		65ED1D561F2F609100427A10 /* 首頁 */ = {
+			isa = PBXGroup;
+			children = (
+				6519E06F1F2C91F6007D6DBE /* ExploreViewController.swift */,
+			);
+			name = "首頁";
+			sourceTree = "<group>";
+		};
+		65ED1D571F2F60AA00427A10 /* 體驗列表 */ = {
+			isa = PBXGroup;
+			children = (
+				65ED1D541F2F608B00427A10 /* ExploreListViewController.swift */,
+			);
+			name = "體驗列表";
+			sourceTree = "<group>";
+		};
+		65ED1D581F2F6D7600427A10 /* 首頁 */ = {
+			isa = PBXGroup;
+			children = (
+				6519E0751F2C9863007D6DBE /* 歡迎語/進入探險 */,
+				6519E0761F2C987E007D6DBE /* 最近瀏覽 */,
+				6519E0771F2C988C007D6DBE /* 熱門體驗 */,
+				655B4CC41F2DDB9100555C96 /* 城市分類 */,
+			);
+			name = "首頁";
+			sourceTree = "<group>";
+		};
+		65ED1D591F2F6D8100427A10 /* 體驗列表 */ = {
+			isa = PBXGroup;
+			children = (
+				65ED1D5A1F2F6DB500427A10 /* ExploreListCell.swift */,
+			);
+			name = "體驗列表";
+			sourceTree = "<group>";
+		};
+		65ED1D5C1F2F701A00427A10 /* ShareClasses */ = {
+			isa = PBXGroup;
+			children = (
+				65ED1D5F1F2F704A00427A10 /* Controller */,
+				65ED1D5E1F2F704200427A10 /* View */,
+				65ED1D5D1F2F703B00427A10 /* Model */,
+			);
+			name = ShareClasses;
+			sourceTree = "<group>";
+		};
+		65ED1D5D1F2F703B00427A10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		65ED1D5E1F2F704200427A10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		65ED1D5F1F2F704A00427A10 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -441,7 +505,6 @@
 				6532C3AB1F12347100AC5227 /* LaunchScreen.storyboard in Resources */,
 				65A7D7EA1F1248A0002E5DB8 /* Booking.storyboard in Resources */,
 				6532C3A81F12347100AC5227 /* Assets.xcassets in Resources */,
-				6532C3A61F12347100AC5227 /* Main.storyboard in Resources */,
 				65A7D7E61F1247B2002E5DB8 /* Explore.storyboard in Resources */,
 				65A7D7C41F123EE7002E5DB8 /* Main.storyboard in Resources */,
 				65A7D7EE1F124947002E5DB8 /* Mine.storyboard in Resources */,
@@ -459,7 +522,6 @@
 			files = (
 				6519E06C1F2C90D4007D6DBE /* WelcomeCell.swift in Sources */,
 				65A7D7CA1F1243A9002E5DB8 /* MainTabBar.swift in Sources */,
-				6532C3A31F12347100AC5227 /* ViewController.swift in Sources */,
 				655B4CC61F2DDBE500555C96 /* CityCategoryCell.swift in Sources */,
 				6532C3A11F12347100AC5227 /* AppDelegate.swift in Sources */,
 				6519E0721F2C9604007D6DBE /* RecentBrowseCell.swift in Sources */,
@@ -467,6 +529,8 @@
 				6519E0701F2C91F6007D6DBE /* ExploreViewController.swift in Sources */,
 				65A7D7C61F123F88002E5DB8 /* MainTabBarButton.swift in Sources */,
 				6532C3B51F12367A00AC5227 /* BaseViewController.swift in Sources */,
+				65ED1D551F2F608B00427A10 /* ExploreListViewController.swift in Sources */,
+				65ED1D5B1F2F6DB500427A10 /* ExploreListCell.swift in Sources */,
 				655B4CC81F2DE1CE00555C96 /* CityCategoryCollectionCell.swift in Sources */,
 				6519E0791F2C98C9007D6DBE /* HotExperienceCollectionCell.swift in Sources */,
 				6519E0741F2C96C6007D6DBE /* HotExperienceCell.swift in Sources */,
@@ -477,14 +541,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6532C3A41F12347100AC5227 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6532C3A51F12347100AC5227 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6532C3A91F12347100AC5227 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

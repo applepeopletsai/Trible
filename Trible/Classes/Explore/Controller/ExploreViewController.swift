@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExploreViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+class ExploreViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, WelcomeCellDelegate {
 
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -27,16 +27,17 @@ class ExploreViewController: BaseViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath.row {
-        case 0:
+        case 0: // 歡迎語/進入探險
             let welcomeCell = tableView.dequeueReusableCell(withIdentifier: String(describing: WelcomeCell.self), for: indexPath) as! WelcomeCell
+            welcomeCell.delegate = self
             return welcomeCell
-        case 1:
+        case 1: // 最近瀏覽
             let recentBrowseCel = tableView.dequeueReusableCell(withIdentifier: String(describing: RecentBrowseCell.self), for: indexPath) as! RecentBrowseCell
             return recentBrowseCel
-        case 2:
+        case 2: // 熱門體驗
             let hotExperienceCell = tableView.dequeueReusableCell(withIdentifier: String(describing: HotExperienceCell.self), for: indexPath) as! HotExperienceCell
             return hotExperienceCell
-        case 3:
+        case 3: // 城市分類
             let cityCategoryCell = tableView.dequeueReusableCell(withIdentifier: String(describing: CityCategoryCell.self), for: indexPath) as! CityCategoryCell
             return cityCategoryCell
         default:
@@ -63,6 +64,13 @@ class ExploreViewController: BaseViewController, UITableViewDataSource, UITableV
         }
         
         return height
+    }
+ 
+    // MARK: WelcomeCellDelegate
+    // 進入探險按鈕
+    func exploreButtonPress() {
+        let vc = StoryBoardTool.getViewControllerWith(storyBoardName: explore, viewControllerName: String(describing: ExploreListViewController.self)) as! ExploreListViewController
+        _ = self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

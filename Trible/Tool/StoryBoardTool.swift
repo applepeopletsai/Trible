@@ -13,4 +13,9 @@ class StoryBoardTool: NSObject {
         let storyBoard = UIStoryboard(name: storyBoardName, bundle: nil)
         return storyBoard.instantiateViewController(withIdentifier: navigationControllerName) as! UINavigationController
     }
+    
+    static func getViewControllerWith(storyBoardName:String, viewControllerName:String) -> UIViewController {
+        let storyBoard = UIStoryboard(name: storyBoardName, bundle: nil)
+        return storyBoard.instantiateViewController(withIdentifier: viewControllerName)
+    }
 }

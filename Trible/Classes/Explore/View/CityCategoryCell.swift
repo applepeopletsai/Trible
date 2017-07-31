@@ -12,7 +12,7 @@ class CityCategoryCell: UITableViewCell, UICollectionViewDataSource, UICollectio
 
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
-    let itemHeight = (UIScreen.main.bounds.size.width - 10 * 3) / 3.5
+    let itemHeight = UIScreen.main.bounds.size.width * 0.5
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
@@ -44,7 +44,7 @@ class CityCategoryCell: UITableViewCell, UICollectionViewDataSource, UICollectio
     
     // MARK: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (screenWidth - 10 * 2) / 3, height: (screenWidth - 10 * 2) / 3)
+        return CGSize(width: (screenWidth - 10 * 2) / 3, height: itemHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
