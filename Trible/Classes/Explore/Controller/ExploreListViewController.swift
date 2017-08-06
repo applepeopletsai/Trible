@@ -20,7 +20,7 @@ class ExploreListViewController: BaseViewController, UITableViewDataSource, UITa
     func setupNavigationBar() {
         setupNavigationBackButton(image: nil)
         setupNavigationRightButton(image: nil, title: "搜尋", target: self, action: #selector(searchButtonPress))
-        self.navigationItem.title = "體驗列表"
+        navigationItem.title = "體驗列表"
     }
     
     // MARK: UITableViewDataSource
@@ -46,9 +46,9 @@ class ExploreListViewController: BaseViewController, UITableViewDataSource, UITa
         return screenHeight * 0.45
     }
     
-    
     // MARK: Event Handler
     func searchButtonPress() {
-        
+        let vc = StoryBoardTool.getViewControllerWith(storyBoardName: explore, viewControllerName: String(describing:ExploreSearchViewController.self)) as! ExploreSearchViewController
+        present(vc, animated: true, completion: nil)
     }
 }

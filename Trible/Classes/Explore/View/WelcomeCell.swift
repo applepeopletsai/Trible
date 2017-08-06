@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol WelcomeCellDelegate {
+protocol WelcomeCellDelegate:class {
     func exploreButtonPress()
 }
 
@@ -16,7 +16,7 @@ class WelcomeCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     
-    var delegate:WelcomeCellDelegate?
+    weak var delegate:WelcomeCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,7 @@ class WelcomeCell: UITableViewCell {
     }
     
     @IBAction func exploreButtonPress(_ sender: UIButton) {
-        self.delegate?.exploreButtonPress()
+        delegate?.exploreButtonPress()
     }    
 
 }

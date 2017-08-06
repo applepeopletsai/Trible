@@ -8,16 +8,20 @@
 
 import UIKit
 
+let rootViewController = UIViewController()
+let screenWidth = UIScreen.main.bounds.size.width
+let screenHeight = UIScreen.main.bounds.size.height
+
+let explore = "Explore"
+let message = "Message"
+let booking = "Booking"
+let experience = "Experiencer"
+let mine = "Mine"
+let share = "Share"
+
 class BaseViewController: UIViewController {
-    let rootViewController = UIViewController()
-    let screenWidth = UIScreen.main.bounds.size.width
-    let screenHeight = UIScreen.main.bounds.size.height
-    
-    let explore = "Explore"
-    let message = "Message"
-    let booking = "Booking"
-    let experience = "Experiencer"
-    let mine = "Mine"
+
+    var itemPickerVC: ItemPickerViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,5 +137,19 @@ class BaseViewController: UIViewController {
         _ = self.present(alertController, animated: true, completion: nil)
     }
 
-
+    // MARK: ItemPickerViewController
+    func setupItemPickerViewWith(viewConroller:UIViewController, dataArray:NSArray, selectRow:Int, target:Any) {
+        self.view.endEditing(true)
+        
+        itemPickerVC = StoryBoardTool.getViewControllerWith(storyBoardName: share, viewControllerName: String(describing:ItemPickerViewController.self)) as? ItemPickerViewController
+        itemPickerVC?.delegate = target as? ItemPickerViewControllerDelegate
+        itemPickerVC?.setupItemPickerViewWith(dataArray: dataArray)
+        itemPickerVC?.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        
+        viewConroller.view.window?.addSubview((itemPickerVC?.view)!)
+        itemPickerVC?.setSelectRowWith(row: selectRow)
+        itemPickerVC?.slideUpWithAnimation()
+    }
+    
+    
 }

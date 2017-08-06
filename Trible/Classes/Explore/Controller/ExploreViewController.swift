@@ -70,7 +70,7 @@ class ExploreViewController: BaseViewController, UITableViewDataSource, UITableV
     // 進入探險按鈕
     func exploreButtonPress() {
         let vc = StoryBoardTool.getViewControllerWith(storyBoardName: explore, viewControllerName: String(describing: ExploreListViewController.self)) as! ExploreListViewController
-        _ = self.navigationController?.pushViewController(vc, animated: true)
+        _ = navigationController?.pushViewController(vc, animated: true)
     }
     
 }

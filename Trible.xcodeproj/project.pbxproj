@@ -18,6 +18,7 @@
 		6532C3B51F12367A00AC5227 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532C3B41F12367A00AC5227 /* BaseViewController.swift */; };
 		655B4CC61F2DDBE500555C96 /* CityCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B4CC51F2DDBE500555C96 /* CityCategoryCell.swift */; };
 		655B4CC81F2DE1CE00555C96 /* CityCategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B4CC71F2DE1CE00555C96 /* CityCategoryCollectionCell.swift */; };
+		657F575F1F36DAF9001AF306 /* ExploreSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F575E1F36DAF9001AF306 /* ExploreSearchViewController.swift */; };
 		65A7D7C41F123EE7002E5DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A7D7C31F123EE7002E5DB8 /* Main.storyboard */; };
 		65A7D7C61F123F88002E5DB8 /* MainTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A7D7C51F123F88002E5DB8 /* MainTabBarButton.swift */; };
 		65A7D7C81F123FD3002E5DB8 /* MainTabBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A7D7C71F123FD3002E5DB8 /* MainTabBarButton.xib */; };
@@ -31,6 +32,8 @@
 		65A7D7EE1F124947002E5DB8 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A7D7ED1F124947002E5DB8 /* Mine.storyboard */; };
 		65ED1D551F2F608B00427A10 /* ExploreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED1D541F2F608B00427A10 /* ExploreListViewController.swift */; };
 		65ED1D5B1F2F6DB500427A10 /* ExploreListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED1D5A1F2F6DB500427A10 /* ExploreListCell.swift */; };
+		65ED1D611F2F875600427A10 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65ED1D601F2F875600427A10 /* Share.storyboard */; };
+		65ED1D631F30D08400427A10 /* ItemPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED1D621F30D08400427A10 /* ItemPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,7 @@
 		6532C3B41F12367A00AC5227 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Base/BaseViewController.swift; sourceTree = "<group>"; };
 		655B4CC51F2DDBE500555C96 /* CityCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityCategoryCell.swift; path = Classes/Explore/View/CityCategoryCell.swift; sourceTree = "<group>"; };
 		655B4CC71F2DE1CE00555C96 /* CityCategoryCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityCategoryCollectionCell.swift; path = Classes/Explore/View/CityCategoryCollectionCell.swift; sourceTree = "<group>"; };
+		657F575E1F36DAF9001AF306 /* ExploreSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExploreSearchViewController.swift; path = Classes/Explore/Controller/ExploreSearchViewController.swift; sourceTree = "<group>"; };
 		65A7D7C31F123EE7002E5DB8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Main/View/Main.storyboard; sourceTree = "<group>"; };
 		65A7D7C51F123F88002E5DB8 /* MainTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarButton.swift; path = Main/View/MainTabBarButton.swift; sourceTree = "<group>"; };
 		65A7D7C71F123FD3002E5DB8 /* MainTabBarButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainTabBarButton.xib; path = Main/View/MainTabBarButton.xib; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		65A7D7ED1F124947002E5DB8 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Mine.storyboard; path = Classes/Mine/View/Mine.storyboard; sourceTree = "<group>"; };
 		65ED1D541F2F608B00427A10 /* ExploreListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExploreListViewController.swift; path = Classes/Explore/Controller/ExploreListViewController.swift; sourceTree = "<group>"; };
 		65ED1D5A1F2F6DB500427A10 /* ExploreListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExploreListCell.swift; path = Classes/Explore/View/ExploreListCell.swift; sourceTree = "<group>"; };
+		65ED1D601F2F875600427A10 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Share.storyboard; path = ShareClasses/View/Share.storyboard; sourceTree = "<group>"; };
+		65ED1D621F30D08400427A10 /* ItemPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemPickerViewController.swift; path = ShareClasses/Controller/ItemPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,14 @@
 				655B4CC71F2DE1CE00555C96 /* CityCategoryCollectionCell.swift */,
 			);
 			name = "城市分類";
+			sourceTree = "<group>";
+		};
+		657F575D1F36DA83001AF306 /* 體驗搜尋 */ = {
+			isa = PBXGroup;
+			children = (
+				657F575E1F36DAF9001AF306 /* ExploreSearchViewController.swift */,
+			);
+			name = "體驗搜尋";
 			sourceTree = "<group>";
 		};
 		65A7D7BD1F123DC2002E5DB8 /* Main */ = {
@@ -283,6 +297,7 @@
 			children = (
 				65ED1D561F2F609100427A10 /* 首頁 */,
 				65ED1D571F2F60AA00427A10 /* 體驗列表 */,
+				657F575D1F36DA83001AF306 /* 體驗搜尋 */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -430,6 +445,7 @@
 		65ED1D5E1F2F704200427A10 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				65ED1D601F2F875600427A10 /* Share.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -437,6 +453,7 @@
 		65ED1D5F1F2F704A00427A10 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				65ED1D621F30D08400427A10 /* ItemPickerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -507,6 +524,7 @@
 				6532C3A81F12347100AC5227 /* Assets.xcassets in Resources */,
 				65A7D7E61F1247B2002E5DB8 /* Explore.storyboard in Resources */,
 				65A7D7C41F123EE7002E5DB8 /* Main.storyboard in Resources */,
+				65ED1D611F2F875600427A10 /* Share.storyboard in Resources */,
 				65A7D7EE1F124947002E5DB8 /* Mine.storyboard in Resources */,
 				65A7D7E81F12480B002E5DB8 /* Message.storyboard in Resources */,
 				65A7D7EC1F124915002E5DB8 /* Experience.storyboard in Resources */,
@@ -524,7 +542,9 @@
 				65A7D7CA1F1243A9002E5DB8 /* MainTabBar.swift in Sources */,
 				655B4CC61F2DDBE500555C96 /* CityCategoryCell.swift in Sources */,
 				6532C3A11F12347100AC5227 /* AppDelegate.swift in Sources */,
+				657F575F1F36DAF9001AF306 /* ExploreSearchViewController.swift in Sources */,
 				6519E0721F2C9604007D6DBE /* RecentBrowseCell.swift in Sources */,
+				65ED1D631F30D08400427A10 /* ItemPickerViewController.swift in Sources */,
 				65A7D7CC1F12443C002E5DB8 /* MainTabBarController.swift in Sources */,
 				6519E0701F2C91F6007D6DBE /* ExploreViewController.swift in Sources */,
 				65A7D7C61F123F88002E5DB8 /* MainTabBarButton.swift in Sources */,
