@@ -12,10 +12,10 @@ enum SelectType {
     case Price, Count, Country, City
 }
 
-let priceArray: NSArray = ["1000以下","1000-2000","2000-3000","3000-4000"]
-let countArray: NSArray = ["1人","2人","3人","4人以上"]
+let priceArray: NSArray =   ["1000以下","1000-2000","2000-3000","3000-4000"]
+let countArray: NSArray =   ["1人","2人","3人","4人以上"]
 let countryArray: NSArray = [""]
-let cityArray: NSArray = [""]
+let cityArray: NSArray =    [""]
 
 class ExploreSearchViewController: BaseViewController, ItemPickerViewControllerDelegate {
 

@@ -50,6 +50,10 @@ class ExploreViewController: BaseViewController, UITableViewDataSource, UITableV
         return CGFloat.leastNormalMagnitude
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height:CGFloat = 0
         
@@ -69,7 +73,7 @@ class ExploreViewController: BaseViewController, UITableViewDataSource, UITableV
     // MARK: WelcomeCellDelegate
     // 進入探險按鈕
     func exploreButtonPress() {
-        let vc = StoryBoardTool.getViewControllerWith(storyBoardName: explore, viewControllerName: String(describing: ExploreListViewController.self)) as! ExploreListViewController
+        let vc = StoryBoardTool.getViewControllerWith(storyBoardName: EXPLORE, viewControllerName: String(describing: ExploreListViewController.self)) as! ExploreListViewController
         _ = navigationController?.pushViewController(vc, animated: true)
     }
     

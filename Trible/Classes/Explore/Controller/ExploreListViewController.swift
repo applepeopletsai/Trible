@@ -38,17 +38,17 @@ class ExploreListViewController: BaseViewController, UITableViewDataSource, UITa
     }
     
     // MARK: UITableViewDelegate
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat.leastNormalMagnitude
-    }
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 0
+//    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return screenHeight * 0.45
+        return SCREENHEIGHT * 0.45
     }
     
     // MARK: Event Handler
     func searchButtonPress() {
-        let vc = StoryBoardTool.getViewControllerWith(storyBoardName: explore, viewControllerName: String(describing:ExploreSearchViewController.self)) as! ExploreSearchViewController
+        let vc = StoryBoardTool.getViewControllerWith(storyBoardName: EXPLORE, viewControllerName: String(describing:ExploreSearchViewController.self)) as! ExploreSearchViewController
         present(vc, animated: true, completion: nil)
     }
 }

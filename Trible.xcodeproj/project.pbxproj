@@ -19,6 +19,9 @@
 		655B4CC61F2DDBE500555C96 /* CityCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B4CC51F2DDBE500555C96 /* CityCategoryCell.swift */; };
 		655B4CC81F2DE1CE00555C96 /* CityCategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B4CC71F2DE1CE00555C96 /* CityCategoryCollectionCell.swift */; };
 		657F575F1F36DAF9001AF306 /* ExploreSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657F575E1F36DAF9001AF306 /* ExploreSearchViewController.swift */; };
+		6584AFE11F432D5000EE1BEF /* MessageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584AFE01F432D5000EE1BEF /* MessageContentViewController.swift */; };
+		6584AFE41F432E0A00EE1BEF /* MessageInCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584AFE31F432E0A00EE1BEF /* MessageInCell.swift */; };
+		6584AFE61F432E2200EE1BEF /* MessageOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584AFE51F432E2200EE1BEF /* MessageOutCell.swift */; };
 		65A7D7C41F123EE7002E5DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A7D7C31F123EE7002E5DB8 /* Main.storyboard */; };
 		65A7D7C61F123F88002E5DB8 /* MainTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A7D7C51F123F88002E5DB8 /* MainTabBarButton.swift */; };
 		65A7D7C81F123FD3002E5DB8 /* MainTabBarButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A7D7C71F123FD3002E5DB8 /* MainTabBarButton.xib */; };
@@ -34,9 +37,14 @@
 		65ED1D5B1F2F6DB500427A10 /* ExploreListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED1D5A1F2F6DB500427A10 /* ExploreListCell.swift */; };
 		65ED1D611F2F875600427A10 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65ED1D601F2F875600427A10 /* Share.storyboard */; };
 		65ED1D631F30D08400427A10 /* ItemPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ED1D621F30D08400427A10 /* ItemPickerViewController.swift */; };
+		65FDFEE31F41C9C40072DC3A /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDFEE21F41C9C40072DC3A /* MessageViewController.swift */; };
+		65FDFEE61F41D3990072DC3A /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDFEE51F41D3990072DC3A /* MessageListViewController.swift */; };
+		65FDFEE91F41D9870072DC3A /* MessageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDFEE81F41D9870072DC3A /* MessageListCell.swift */; };
+		72693845DEC536F4BB520481 /* Pods_Trible.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9DBD9B22AC4B744E9EA161 /* Pods_Trible.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BE0447422A40D5ADCCD620A /* Pods-Trible.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trible.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trible/Pods-Trible.release.xcconfig"; sourceTree = "<group>"; };
 		6519E06B1F2C90D4007D6DBE /* WelcomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeCell.swift; path = Classes/Explore/View/WelcomeCell.swift; sourceTree = "<group>"; };
 		6519E06F1F2C91F6007D6DBE /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExploreViewController.swift; path = Classes/Explore/Controller/ExploreViewController.swift; sourceTree = "<group>"; };
 		6519E0711F2C9604007D6DBE /* RecentBrowseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentBrowseCell.swift; path = Classes/Explore/View/RecentBrowseCell.swift; sourceTree = "<group>"; };
@@ -51,6 +59,9 @@
 		655B4CC51F2DDBE500555C96 /* CityCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityCategoryCell.swift; path = Classes/Explore/View/CityCategoryCell.swift; sourceTree = "<group>"; };
 		655B4CC71F2DE1CE00555C96 /* CityCategoryCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityCategoryCollectionCell.swift; path = Classes/Explore/View/CityCategoryCollectionCell.swift; sourceTree = "<group>"; };
 		657F575E1F36DAF9001AF306 /* ExploreSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExploreSearchViewController.swift; path = Classes/Explore/Controller/ExploreSearchViewController.swift; sourceTree = "<group>"; };
+		6584AFE01F432D5000EE1BEF /* MessageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageContentViewController.swift; path = Classes/Message/Controller/MessageContentViewController.swift; sourceTree = "<group>"; };
+		6584AFE31F432E0A00EE1BEF /* MessageInCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageInCell.swift; path = Classes/Message/View/MessageInCell.swift; sourceTree = "<group>"; };
+		6584AFE51F432E2200EE1BEF /* MessageOutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageOutCell.swift; path = Classes/Message/View/MessageOutCell.swift; sourceTree = "<group>"; };
 		65A7D7C31F123EE7002E5DB8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Main/View/Main.storyboard; sourceTree = "<group>"; };
 		65A7D7C51F123F88002E5DB8 /* MainTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarButton.swift; path = Main/View/MainTabBarButton.swift; sourceTree = "<group>"; };
 		65A7D7C71F123FD3002E5DB8 /* MainTabBarButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainTabBarButton.xib; path = Main/View/MainTabBarButton.xib; sourceTree = "<group>"; };
@@ -66,6 +77,11 @@
 		65ED1D5A1F2F6DB500427A10 /* ExploreListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExploreListCell.swift; path = Classes/Explore/View/ExploreListCell.swift; sourceTree = "<group>"; };
 		65ED1D601F2F875600427A10 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Share.storyboard; path = ShareClasses/View/Share.storyboard; sourceTree = "<group>"; };
 		65ED1D621F30D08400427A10 /* ItemPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemPickerViewController.swift; path = ShareClasses/Controller/ItemPickerViewController.swift; sourceTree = "<group>"; };
+		65FDFEE21F41C9C40072DC3A /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Classes/Message/Controller/MessageViewController.swift; sourceTree = "<group>"; };
+		65FDFEE51F41D3990072DC3A /* MessageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageListViewController.swift; path = Classes/Message/Controller/MessageListViewController.swift; sourceTree = "<group>"; };
+		65FDFEE81F41D9870072DC3A /* MessageListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageListCell.swift; path = Classes/Message/View/MessageListCell.swift; sourceTree = "<group>"; };
+		C8C4462042335D371F03657A /* Pods-Trible.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trible.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trible/Pods-Trible.debug.xcconfig"; sourceTree = "<group>"; };
+		CA9DBD9B22AC4B744E9EA161 /* Pods_Trible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72693845DEC536F4BB520481 /* Pods_Trible.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +126,8 @@
 			children = (
 				6532C39F1F12347100AC5227 /* Trible */,
 				6532C39E1F12347100AC5227 /* Products */,
+				CC5892E47C1C369B680DE2ED /* Pods */,
+				66410204A39E771D4C9C3FA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +186,23 @@
 				657F575E1F36DAF9001AF306 /* ExploreSearchViewController.swift */,
 			);
 			name = "體驗搜尋";
+			sourceTree = "<group>";
+		};
+		6584AFDF1F432D2600EE1BEF /* 訊息內容 */ = {
+			isa = PBXGroup;
+			children = (
+				6584AFE01F432D5000EE1BEF /* MessageContentViewController.swift */,
+			);
+			name = "訊息內容";
+			sourceTree = "<group>";
+		};
+		6584AFE21F432D6F00EE1BEF /* 訊息內容 */ = {
+			isa = PBXGroup;
+			children = (
+				6584AFE31F432E0A00EE1BEF /* MessageInCell.swift */,
+				6584AFE51F432E2200EE1BEF /* MessageOutCell.swift */,
+			);
+			name = "訊息內容";
 			sourceTree = "<group>";
 		};
 		65A7D7BD1F123DC2002E5DB8 /* Main */ = {
@@ -312,6 +348,8 @@
 		65A7D7DA1F1246E5002E5DB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				65FDFEE71F41D95F0072DC3A /* 訊息列表 */,
+				6584AFE21F432D6F00EE1BEF /* 訊息內容 */,
 				65A7D7E71F12480B002E5DB8 /* Message.storyboard */,
 			);
 			name = View;
@@ -320,6 +358,9 @@
 		65A7D7DB1F1246EA002E5DB8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				65FDFEE11F41C98F0072DC3A /* 首頁 */,
+				65FDFEE41F41D3590072DC3A /* 訊息列表 */,
+				6584AFDF1F432D2600EE1BEF /* 訊息內容 */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -458,6 +499,47 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		65FDFEE11F41C98F0072DC3A /* 首頁 */ = {
+			isa = PBXGroup;
+			children = (
+				65FDFEE21F41C9C40072DC3A /* MessageViewController.swift */,
+			);
+			name = "首頁";
+			sourceTree = "<group>";
+		};
+		65FDFEE41F41D3590072DC3A /* 訊息列表 */ = {
+			isa = PBXGroup;
+			children = (
+				65FDFEE51F41D3990072DC3A /* MessageListViewController.swift */,
+			);
+			name = "訊息列表";
+			sourceTree = "<group>";
+		};
+		65FDFEE71F41D95F0072DC3A /* 訊息列表 */ = {
+			isa = PBXGroup;
+			children = (
+				65FDFEE81F41D9870072DC3A /* MessageListCell.swift */,
+			);
+			name = "訊息列表";
+			sourceTree = "<group>";
+		};
+		66410204A39E771D4C9C3FA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA9DBD9B22AC4B744E9EA161 /* Pods_Trible.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC5892E47C1C369B680DE2ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8C4462042335D371F03657A /* Pods-Trible.debug.xcconfig */,
+				5BE0447422A40D5ADCCD620A /* Pods-Trible.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -465,9 +547,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6532C3AF1F12347100AC5227 /* Build configuration list for PBXNativeTarget "Trible" */;
 			buildPhases = (
+				AB9B1CBA6C31A9A30404698D /* [CP] Check Pods Manifest.lock */,
 				6532C3991F12347100AC5227 /* Sources */,
 				6532C39A1F12347100AC5227 /* Frameworks */,
 				6532C39B1F12347100AC5227 /* Resources */,
+				0EB392AE44505677826BE4EB /* [CP] Embed Pods Frameworks */,
+				36A04EC1C57B68CDF9BD308C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -533,6 +618,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EB392AE44505677826BE4EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trible/Pods-Trible-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36A04EC1C57B68CDF9BD308C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trible/Pods-Trible-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB9B1CBA6C31A9A30404698D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6532C3991F12347100AC5227 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -548,9 +681,15 @@
 				65A7D7CC1F12443C002E5DB8 /* MainTabBarController.swift in Sources */,
 				6519E0701F2C91F6007D6DBE /* ExploreViewController.swift in Sources */,
 				65A7D7C61F123F88002E5DB8 /* MainTabBarButton.swift in Sources */,
+				65FDFEE31F41C9C40072DC3A /* MessageViewController.swift in Sources */,
 				6532C3B51F12367A00AC5227 /* BaseViewController.swift in Sources */,
+				6584AFE41F432E0A00EE1BEF /* MessageInCell.swift in Sources */,
+				6584AFE11F432D5000EE1BEF /* MessageContentViewController.swift in Sources */,
 				65ED1D551F2F608B00427A10 /* ExploreListViewController.swift in Sources */,
+				65FDFEE91F41D9870072DC3A /* MessageListCell.swift in Sources */,
+				6584AFE61F432E2200EE1BEF /* MessageOutCell.swift in Sources */,
 				65ED1D5B1F2F6DB500427A10 /* ExploreListCell.swift in Sources */,
+				65FDFEE61F41D3990072DC3A /* MessageListViewController.swift in Sources */,
 				655B4CC81F2DE1CE00555C96 /* CityCategoryCollectionCell.swift in Sources */,
 				6519E0791F2C98C9007D6DBE /* HotExperienceCollectionCell.swift in Sources */,
 				6519E0741F2C96C6007D6DBE /* HotExperienceCell.swift in Sources */,
@@ -667,12 +806,14 @@
 		};
 		6532C3B01F12347100AC5227 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C4462042335D371F03657A /* Pods-Trible.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F7UTH8N4W3;
 				INFOPLIST_FILE = Trible/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.Daniel.Trible;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.Trible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -680,12 +821,14 @@
 		};
 		6532C3B11F12347100AC5227 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BE0447422A40D5ADCCD620A /* Pods-Trible.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F7UTH8N4W3;
 				INFOPLIST_FILE = Trible/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.Daniel.Trible;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.Trible;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

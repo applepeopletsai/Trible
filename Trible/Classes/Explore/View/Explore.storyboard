@@ -13,7 +13,7 @@
         <!--Explore View Controller-->
         <scene sceneID="Jde-qL-4AI">
             <objects>
-                <viewController storyboardIdentifier="ExploreViewController" id="odD-Fd-IU0" customClass="ExploreViewController" customModule="Trible" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExploreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="odD-Fd-IU0" customClass="ExploreViewController" customModule="Trible" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AAj-WS-g3x"/>
                         <viewControllerLayoutGuide type="bottom" id="TNq-NA-Hhr"/>
@@ -22,9 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-qB-bXj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Kkc-qB-bXj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WelcomeCell" rowHeight="100" id="Zgu-XC-kd5" customClass="WelcomeCell" customModule="Trible" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="100"/>
@@ -198,6 +198,7 @@
                             <constraint firstAttribute="bottom" secondItem="Kkc-qB-bXj" secondAttribute="bottom" id="m0x-2Q-JLN"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="4S9-Px-Sy1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faq-pP-1y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -539,9 +540,10 @@
             <objects>
                 <navigationController storyboardIdentifier="ExploreNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kGc-Sf-kb0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ApE-3Z-qpM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ApE-3Z-qpM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

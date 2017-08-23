@@ -9,15 +9,15 @@
 import UIKit
 
 let rootViewController = UIViewController()
-let screenWidth = UIScreen.main.bounds.size.width
-let screenHeight = UIScreen.main.bounds.size.height
+let SCREENWIDTH        = UIScreen.main.bounds.size.width
+let SCREENHEIGHT       = UIScreen.main.bounds.size.height
 
-let explore = "Explore"
-let message = "Message"
-let booking = "Booking"
-let experience = "Experiencer"
-let mine = "Mine"
-let share = "Share"
+let EXPLORE    = "Explore"
+let MESSAGE    = "Message"
+let BOOKING    = "Booking"
+let EXPERIENCE = "Experiencer"
+let MINE       = "Mine"
+let SHARE      = "Share"
 
 class BaseViewController: UIViewController {
 
@@ -25,6 +25,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        navigationController?.navigationBar.barTintColor = UIColor.white
     }
     
     // MARK: SetupNavigationStytle
@@ -141,10 +142,10 @@ class BaseViewController: UIViewController {
     func setupItemPickerViewWith(viewConroller:UIViewController, dataArray:NSArray, selectRow:Int, target:Any) {
         self.view.endEditing(true)
         
-        itemPickerVC = StoryBoardTool.getViewControllerWith(storyBoardName: share, viewControllerName: String(describing:ItemPickerViewController.self)) as? ItemPickerViewController
+        itemPickerVC = StoryBoardTool.getViewControllerWith(storyBoardName: SHARE, viewControllerName: String(describing:ItemPickerViewController.self)) as? ItemPickerViewController
         itemPickerVC?.delegate = target as? ItemPickerViewControllerDelegate
         itemPickerVC?.setupItemPickerViewWith(dataArray: dataArray)
-        itemPickerVC?.view.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        itemPickerVC?.view.frame = CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT)
         
         viewConroller.view.window?.addSubview((itemPickerVC?.view)!)
         itemPickerVC?.setSelectRowWith(row: selectRow)
