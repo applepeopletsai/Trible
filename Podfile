@@ -6,6 +6,7 @@ target 'Trible' do
   use_frameworks!
 
   # Pods for Trible
-  
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 
 end
