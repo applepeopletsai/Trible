@@ -8,5 +8,8 @@ target 'Trible' do
   # Pods for Trible
   pod 'Alamofire'
   pod 'SwiftyJSON'
-
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
+  pod 'FBSDKLoginKit'
+  
 end

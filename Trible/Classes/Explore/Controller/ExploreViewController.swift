@@ -7,12 +7,54 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ExploreViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, WelcomeCellDelegate {
-
+    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let password = "a123456TribleIsAmazing"
+//        
+//        let data = password.data(using: String.Encoding.utf8)
+//        let res = NSMutableData(length: Int(CC_SHA256_DIGEST_LENGTH))
+//        CC_SHA256(((data! as NSData)).bytes, CC_LONG(data!.count), res?.mutableBytes.assumingMemoryBound(to: UInt8.self))
+//        let passwordBase64 = res?.base64EncodedString(options: [])
+//    
+//        APIManager.apiLogin(userName: "member@123.com", password: passwordBase64!) { response in
+//            if response.result.isSuccess {
+//                
+//                APIManager.apiGetMember(handler: { response1 in
+//                    if response1.result.isSuccess {
+//                        print(JSON(response1.result.value))
+//                    } else {
+//                        
+//                    }
+//                })
+//                
+//            } else {
+//                
+//            }
+//        }
+//        APIManager.apiGetCheckInfo(email: "apple@test.com") { response in
+//            if response.result.isSuccess {
+//                if let data = response.result.value {
+//                    print(JSON(data))
+//                }
+//            } else {
+//                
+//            }
+//        }
+//        APIManager.apiGetExploreList { response in
+//            if response.result.isSuccess {
+//                if let data = response.result.value {
+//                    print(JSON(data))
+//                }
+//            } else {
+//                
+//            }
+//        }
     }
     
     // MARK: UITableViewDataSource

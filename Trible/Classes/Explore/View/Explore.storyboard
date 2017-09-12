@@ -540,7 +540,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ExploreNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kGc-Sf-kb0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ApE-3Z-qpM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ApE-3Z-qpM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
