@@ -12,6 +12,7 @@
 		6519E0721F2C9604007D6DBE /* RecentBrowseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519E0711F2C9604007D6DBE /* RecentBrowseCell.swift */; };
 		6519E0741F2C96C6007D6DBE /* HotExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519E0731F2C96C6007D6DBE /* HotExperienceCell.swift */; };
 		6519E0791F2C98C9007D6DBE /* HotExperienceCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519E0781F2C98C9007D6DBE /* HotExperienceCollectionCell.swift */; };
+		6520912B1F7160AB00950D1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6520912A1F7160AB00950D1F /* GoogleService-Info.plist */; };
 		6532C3A11F12347100AC5227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532C3A01F12347100AC5227 /* AppDelegate.swift */; };
 		6532C3A81F12347100AC5227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6532C3A71F12347100AC5227 /* Assets.xcassets */; };
 		6532C3AB1F12347100AC5227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6532C3A91F12347100AC5227 /* LaunchScreen.storyboard */; };
@@ -54,6 +55,7 @@
 		6519E0711F2C9604007D6DBE /* RecentBrowseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentBrowseCell.swift; path = Classes/Explore/View/RecentBrowseCell.swift; sourceTree = "<group>"; };
 		6519E0731F2C96C6007D6DBE /* HotExperienceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotExperienceCell.swift; path = Classes/Explore/View/HotExperienceCell.swift; sourceTree = "<group>"; };
 		6519E0781F2C98C9007D6DBE /* HotExperienceCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotExperienceCollectionCell.swift; path = Classes/Explore/View/HotExperienceCollectionCell.swift; sourceTree = "<group>"; };
+		6520912A1F7160AB00950D1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6532C39D1F12347100AC5227 /* Trible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6532C3A01F12347100AC5227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6532C3A71F12347100AC5227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				6532C3A71F12347100AC5227 /* Assets.xcassets */,
 				6532C3A91F12347100AC5227 /* LaunchScreen.storyboard */,
 				6532C3AC1F12347100AC5227 /* Info.plist */,
+				6520912A1F7160AB00950D1F /* GoogleService-Info.plist */,
 				6597E6BB1F55BA3100A7D13A /* Trible-Bridging-Header.h */,
 			);
 			path = Trible;
@@ -655,6 +658,7 @@
 				65A7D7EA1F1248A0002E5DB8 /* Booking.storyboard in Resources */,
 				6532C3A81F12347100AC5227 /* Assets.xcassets in Resources */,
 				65A7D7E61F1247B2002E5DB8 /* Explore.storyboard in Resources */,
+				6520912B1F7160AB00950D1F /* GoogleService-Info.plist in Resources */,
 				65A7D7C41F123EE7002E5DB8 /* Main.storyboard in Resources */,
 				65ED1D611F2F875600427A10 /* Share.storyboard in Resources */,
 				65A7D7EE1F124947002E5DB8 /* Mine.storyboard in Resources */,

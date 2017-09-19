@@ -7,13 +7,16 @@
 //
 
 import UIKit
-import FBSDKLoginKit
 import SwiftyJSON
+import FBSDKLoginKit
+import GoogleSignIn
 
 class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
     
     @IBAction func fbLoginButtonPress(_ sender: UIButton) {
@@ -40,6 +43,10 @@ class LoginViewController: BaseViewController {
         }
     }
     
+    @IBAction func googleLoginButtonPress(_ sender: UIButton) {
+       GIDSignIn.sharedInstance().signIn()
+    }
+    
     func getFbProfile() {
         
         // 需要取得的資訊種類
@@ -63,3 +70,34 @@ class LoginViewController: BaseViewController {
     }
 }
 
+// MARK: Google Delegate
+extension LoginViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if (error == nil) {
+            print("user: \(user)")
+            print("userId: \(user.userID)")
+            print("accessToken: \(user.authentication.accessToken)")
+            print("clientID: \(user.authentication.clientID)")
+            print("idToken: \(user.authentication.idToken)")
+            print("name: \(user.profile.name)")
+            print("givenName: \(user.profile.givenName)")
+            print("familyName: \(user.profile.familyName)")
+            print("email: \(user.profile.email)")
+        } else {
+            print("Google登入失敗 : \(error.localizedDescription)")
+        }
+    }
+}
+
+extension LoginViewController: GIDSignInUIDelegate {
+    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
+    }
+    
+    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+        self.dismiss(animated: true, completion: nil)
+    }
+}

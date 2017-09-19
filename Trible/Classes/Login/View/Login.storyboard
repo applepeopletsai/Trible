@@ -58,6 +58,9 @@
                                 <state key="normal" title="Google">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="googleLoginButtonPress:" destination="Ye5-F6-X2K" eventType="touchUpInside" id="XEy-lX-lW4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.50196078431372548" green="0.76862745098039209" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
