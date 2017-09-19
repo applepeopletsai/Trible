@@ -18,11 +18,10 @@ class LoginViewController: BaseViewController {
     
     @IBAction func fbLoginButtonPress(_ sender: UIButton) {
         if (FBSDKAccessToken.current()) != nil {
-            fetchProfile()
+            getFbProfile()
             APIManager.apiGetMember(key: FBSDKAccessToken.current().userID, handler: { response in
                 if response.result.isSuccess {
-                    
-                    if let data = response.result.value {
+                    if let data = response.data {
                         print(JSON(data))
                     }
                     
@@ -36,41 +35,27 @@ class LoginViewController: BaseViewController {
                     print(error?.localizedDescription ?? "error")
                     return
                 }
-                self.fetchProfile()
+                self.getFbProfile()
             }
         }
     }
     
-    func fetchProfile() {
-        print("attempt to fetch profile......")
+    func getFbProfile() {
         
-        let parameters = ["fields": "email, first_name, last_name, picture.type(large), name, link, birthday"]
+        // 需要取得的資訊種類
+        let parameters = ["fields": "id, first_name, last_name, name, email, picture.type(large), link, birthday"]
         
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).start(completionHandler: {
             connection, result, error -> Void in
             
             if error != nil {
-                print("登入失敗")
-                print("longinerror =\(String(describing: error?.localizedDescription))")
+                print("FB Login Error : \(String(describing: error?.localizedDescription))")
             } else {
+                print("FB登入成功")
                 
-                if let resultNew = result as? [String:Any] {
-                    
-                    print("成功登入")
-                    
-                    let email = resultNew["email"]  as! String
-                    print(email)
-                    
-                    let firstName = resultNew["first_name"] as! String
-                    print(firstName)
-                    
-                    let lastName = resultNew["last_name"] as! String
-                    print(lastName)
-                    
-                    if let picture = resultNew["picture"] as? NSDictionary,
-                        let data = picture["data"] as? NSDictionary,
-                        let url = data["url"] as? String {
-                        print(url) //臉書大頭貼的url, 再放入imageView內秀出來
+                if let dataDic = result as? [String:Any] {
+                    for (key, value) in dataDic {
+                        print("\(key): \(value)")
                     }
                 }
             }
@@ -78,13 +63,3 @@ class LoginViewController: BaseViewController {
     }
 }
 
-extension LoginViewController: FBSDKLoginButtonDelegate {
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        print("登入Facebook")
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        print("登出Facebook")
-    }
-    
-}
