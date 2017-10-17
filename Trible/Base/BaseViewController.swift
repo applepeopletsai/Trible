@@ -18,6 +18,7 @@ let BOOKING    = "Booking"
 let EXPERIENCE = "Experiencer"
 let MINE       = "Mine"
 let SHARE      = "Share"
+let MAIN       = "Main"
 
 class BaseViewController: UIViewController {
 

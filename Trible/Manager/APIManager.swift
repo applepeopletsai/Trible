@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 let API_URL = "http://triblewebapi.azurewebsites.net/"
-let headers = ["X-Device-Type":"Web"]
+let headers = ["X-Device-Type":"App"]
 
 //\(UserDefaults().value(forKey: "token") as! String)
 // A001 登入
@@ -30,23 +30,28 @@ let API_URL_GETLIST = API_URL + "Explore/GetExploreList"
 class APIManager {
     
     // A001 登入，取得token
-    class func apiLogin(userName: String, password: String, providerKey: String, handler: @escaping (_ response: DataResponse<Any>) -> Void) {
+    // 一般登入帶Username及Password
+    // Facebook與Google登入：取得userid後，帶入Username、ProviderKey、LoginProvider
+    static func apiLogin(userName: String, password: String, providerKey: String, loginProvider: String, handler: @escaping (_ response: DataResponse<Any>) -> Void) {
         let parameters = ["Username":userName,
                           "Password":password,
-                          "ProviderKey":providerKey]
+                          "ProviderKey":providerKey,
+                          "LoginProvider":loginProvider]
         
-        request(API_URL_LOGIN, method: .post, parameters: parameters).responseJSON { response in
+        request(API_URL_LOGIN, method: .post, parameters: parameters, headers: headers).responseJSON { response in
             if let data = response.data {
                 let json = JSON(data)
-                UserDefaults().set(json["Message"].stringValue, forKey: "token")
-                UserDefaults().synchronize()
+                if json["StatusCode"].intValue == 200 {
+                    UserDefaults().set(json["Message"].stringValue, forKey: "token")
+                    UserDefaults().synchronize()
+                }
                 handler(response)
             }
         }
     }
     
     // MEM001 取得會員資料
-    class func apiGetMember(key: String, handler: @escaping (_ response: DataResponse<Any>) -> Void) {
+    static func apiGetMember(key: String, handler: @escaping (_ response: DataResponse<Any>) -> Void) {
         let url = API_URL_MEMBER_GETINFO + "/ProviderKey/" + key
         request(url, method: .get, headers:headers).responseJSON { response in
             handler(response)
@@ -54,7 +59,7 @@ class APIManager {
     }
     
     // MEM002 一般註冊
-    class func apiPostCreateMember(email: String, password: String, confirmPassword: String, nickName: String, handler: @escaping (_ response: DataResponse<Any>) -> Void) {
+    static func apiPostCreateMember(email: String, password: String, confirmPassword: String, nickName: String, handler: @escaping (_ response: DataResponse<Any>) -> Void) {
         let parameters = ["RegisterEmail":email,
                           "RegisterPassword":password,
                           "RegisterConfirmPassword":confirmPassword,
@@ -66,7 +71,7 @@ class APIManager {
     }
     
     // MEM003 檢查註冊帳號是否重複
-    class func apiGetCheckInfo(email: String, handler: @escaping (_ response: DataResponse<Any>) -> Void) {
+    static func apiGetCheckInfo(email: String, handler: @escaping (_ response: DataResponse<Any>) -> Void) {
         let url = API_URL_MEMBER_CEHECKINFO + "/\(1)/\(email)/"
         let header = ["X-Device-Type":"App"]
         request(url, method: .get, headers:header).responseJSON { response in
@@ -75,7 +80,7 @@ class APIManager {
     }
     
     // EXP001 取得體驗列表
-    class func apiGetExploreList(handler: @escaping (_ response: DataResponse<Any>)  -> Void) {
+    static func apiGetExploreList(handler: @escaping (_ response: DataResponse<Any>)  -> Void) {
         request(API_URL_GETLIST, method: .get, headers: headers).responseJSON { response in
             handler(response)
         }

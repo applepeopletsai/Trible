@@ -73,6 +73,19 @@ class MessageContentViewController: BaseViewController, UITableViewDataSource, U
     }
     
     // MARK: UITextViewDelegate
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        
+        if SystemManager.shared.isKeyboardWillShow {
+            print("111")
+        }
+        
+        if SystemManager.shared.isKeyboardDidShow {
+            print("222")
+        }
+        
+        return true
+    }
+    
     func textViewDidChange(_ textView: UITextView) {
         let textViewHeight = (textView.sizeThatFits(CGSize(width: textView.frame.size.width, height: CGFloat(MAXFLOAT)))).height
         if textViewHeight > 80 {

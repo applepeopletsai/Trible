@@ -18,4 +18,9 @@ class StoryBoardTool: NSObject {
         let storyBoard = UIStoryboard(name: storyBoardName, bundle: nil)
         return storyBoard.instantiateViewController(withIdentifier: viewControllerName)
     }
+    
+    static func getTabBarControllerWith(storyBoardName:String, viewControllerName:String) -> UITabBarController {
+        let storyBoard = UIStoryboard(name: storyBoardName, bundle: nil)
+        return storyBoard.instantiateViewController(withIdentifier: viewControllerName) as! UITabBarController
+    }
 }

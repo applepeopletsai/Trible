@@ -22,23 +22,14 @@ class LoginViewController: BaseViewController {
     @IBAction func fbLoginButtonPress(_ sender: UIButton) {
         if (FBSDKAccessToken.current()) != nil {
             getFbProfile()
-            APIManager.apiGetMember(key: FBSDKAccessToken.current().userID, handler: { response in
-                if response.result.isSuccess {
-                    if let data = response.data {
-                        print(JSON(data))
-                    }
-                    
-                } else {
-                    
-                }
-            })
         } else {
             FBSDKLoginManager().logIn(withReadPermissions: ["public_profile", "email", "user_friends"], from: self) { (ressult, error) in
                 if error != nil {
                     print(error?.localizedDescription ?? "error")
                     return
+                } else {
+                    self.getFbProfile()
                 }
-                self.getFbProfile()
             }
         }
     }
@@ -61,8 +52,29 @@ class LoginViewController: BaseViewController {
                 print("FB登入成功")
                 
                 if let dataDic = result as? [String:Any] {
-                    for (key, value) in dataDic {
-                        print("\(key): \(value)")
+                    if let userName = dataDic["email"] as? String, let providerKey = dataDic["id"] as? String {
+                        print(userName)
+                        print(providerKey)
+                        APIManager.apiLogin(userName: userName, password: "", providerKey: providerKey, loginProvider: "Facebook", handler: { response in
+                            if response.result.isSuccess {
+                                if let data = response.data {
+                                    let json = JSON(data)
+                                    if json["StatusCode"].intValue == 200 {
+                                        // 如果成功，代表已經在網站上註冊過且已連結facebook
+                                        // 導到首頁
+                                         let vc = StoryBoardTool.getTabBarControllerWith(storyBoardName: MAIN, viewControllerName: String(describing: MainTabBarController.self))
+                                        self.present(vc, animated: true, completion: nil)
+                                    } else {
+                                        // 如果失敗，代表沒有在網站上註冊過
+                                        // Create
+                                        
+                                    }
+                                    print(JSON(data))
+                                }
+                            } else {
+                                print(response.error?.localizedDescription ?? "")
+                            }
+                        })
                     }
                 }
             }
@@ -74,15 +86,35 @@ class LoginViewController: BaseViewController {
 extension LoginViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if (error == nil) {
-            print("user: \(user)")
-            print("userId: \(user.userID)")
-            print("accessToken: \(user.authentication.accessToken)")
-            print("clientID: \(user.authentication.clientID)")
-            print("idToken: \(user.authentication.idToken)")
-            print("name: \(user.profile.name)")
-            print("givenName: \(user.profile.givenName)")
-            print("familyName: \(user.profile.familyName)")
-            print("email: \(user.profile.email)")
+            APIManager.apiLogin(userName: user.profile.email, password: "", providerKey: user.userID, loginProvider: "Google", handler: { response in
+                if response.result.isSuccess {
+                    if let data = response.data {
+                        let json = JSON(data)
+                        print(json)
+                        if json["StatusCode"].intValue == 200 {
+                            // 如果成功，代表已經在網站上註冊過且已連結google
+                            // 導到首頁
+                            let vc = StoryBoardTool.getTabBarControllerWith(storyBoardName: MAIN, viewControllerName: String(describing: MainTabBarController.self))
+                            self.present(vc, animated: true, completion: nil)
+                        } else {
+                            // 如果失敗，代表沒有在網站上註冊過
+                            // Create
+                            
+                        }
+                    }
+                } else {
+                    
+                }
+            })
+//            print("user: \(user)")
+//            print("userId: \(user.userID)")
+//            print("accessToken: \(user.authentication.accessToken)")
+//            print("clientID: \(user.authentication.clientID)")
+//            print("idToken: \(user.authentication.idToken)")
+//            print("name: \(user.profile.name)")
+//            print("givenName: \(user.profile.givenName)")
+//            print("familyName: \(user.profile.familyName)")
+//            print("email: \(user.profile.email)")
         } else {
             print("Google登入失敗 : \(error.localizedDescription)")
         }
