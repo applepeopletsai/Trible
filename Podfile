@@ -13,5 +13,5 @@ target 'Trible' do
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
   pod 'Google/SignIn'
-  
+
 end

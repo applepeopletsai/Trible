@@ -26,28 +26,28 @@ class SystemManager: NSObject {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardDidShow(notification:Notification) {
+    @objc func keyboardDidShow(notification:Notification) {
         self.isKeyboardDidShow = true
         self.isKeyboardDidHide = false
         self.isKeyboardWillShow = false
         self.isKeyboardWillHide = false
     }
     
-    func keyboardDidHide(notification:Notification) {
+    @objc func keyboardDidHide(notification:Notification) {
         self.isKeyboardDidShow = false
         self.isKeyboardDidHide = true
         self.isKeyboardWillShow = false
         self.isKeyboardWillHide = false
     }
     
-    func keyboardWillShow(notification:Notification) {
+    @objc func keyboardWillShow(notification:Notification) {
         self.isKeyboardDidShow = false
         self.isKeyboardDidHide = true
         self.isKeyboardWillShow = true
         self.isKeyboardWillHide = false
     }
     
-    func keyboardWillHide(notification:Notification) {
+    @objc func keyboardWillHide(notification:Notification) {
         self.isKeyboardDidShow = true
         self.isKeyboardDidHide = false
         self.isKeyboardWillShow = false

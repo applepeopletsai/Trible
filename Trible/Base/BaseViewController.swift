@@ -31,7 +31,7 @@ class BaseViewController: UIViewController {
     
     // MARK: SetupNavigationStytle
     func setupNavigationTextFont(color:UIColor, font:UIFont) {
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:color, NSFontAttributeName:font]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:color, NSAttributedStringKey.font:font]
     }
     
     func setupNavigationShadowImage(shadowImage:UIImage) {
@@ -90,7 +90,7 @@ class BaseViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = barButtonItem
     }
     
-    func navigationBackButtonPress() {
+    @objc func navigationBackButtonPress() {
         self.view.endEditing(true)
         _ = self.navigationController?.popViewController(animated: true)
     }

@@ -47,7 +47,7 @@ class ExploreListViewController: BaseViewController, UITableViewDataSource, UITa
     }
     
     // MARK: Event Handler
-    func searchButtonPress() {
+    @objc func searchButtonPress() {
         let vc = StoryBoardTool.getViewControllerWith(storyBoardName: EXPLORE, viewControllerName: String(describing:ExploreSearchViewController.self)) as! ExploreSearchViewController
         present(vc, animated: true, completion: nil)
     }

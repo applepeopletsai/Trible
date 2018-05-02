@@ -138,11 +138,11 @@ class MessageContentViewController: BaseViewController, UITableViewDataSource, U
     }
     
     // MARK: Class Method
-    func hideKeyboard() {
+    @objc func hideKeyboard() {
         textView.resignFirstResponder()
     }
     
-    func keyboardWillShow(notification: NSNotification) {
+    @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             UIView.animate(withDuration: 0.2, animations: {
                 self.bottomViewBottomConstraint.constant = keyboardSize.height
@@ -155,7 +155,7 @@ class MessageContentViewController: BaseViewController, UITableViewDataSource, U
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide(notification: NSNotification) {
         UIView.animate(withDuration: 0.2, animations: {
             self.bottomViewBottomConstraint.constant = 0
         })
