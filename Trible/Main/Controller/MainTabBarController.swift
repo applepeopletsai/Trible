@@ -62,6 +62,7 @@ class MainTabBarController: UITabBarController, MainTabBarDelegate {
         self.maintabBar?.delegate = self
         
         self.tabBar.addSubview(self.maintabBar!)
+        self.view.backgroundColor = UIColor.white
     }
     
     //MARK: MainTabBarDelegate
